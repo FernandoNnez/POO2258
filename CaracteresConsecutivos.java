@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class SecuenciaConsecutiva {
+public class CaracteresConsecutivos {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.print("Ingrese una cadena de caracteres: ");
