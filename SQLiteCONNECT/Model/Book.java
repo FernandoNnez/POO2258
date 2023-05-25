@@ -1,14 +1,14 @@
 package SQLiteCONNECT.Model;
 public class Book {
     private int id;
-    private String titulo;
-    private String autor;
+    private String title;
+    private String author;
     public Book(){
     }
-    public Book(int id, String titulo, String autor) {
+    public Book(int id, String title, String author) {
         this.id = id;
-        this.titulo = titulo;
-        this.autor = autor;
+        this.title = title;
+        this.author = author;
     }
     public int getId() {
         return id;
@@ -16,24 +16,24 @@ public class Book {
     public void setId(int id) {
         this.id = id;
     }
-    public String getTitulo() {
-        return titulo;
+    public String getTitle() {
+        return title;
     }
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitle(String title) {
+        this.title = title;
     }
-    public String getAutor() {
-        return autor;
+    public String getAuthor() {
+        return author;
     }
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public void setAuthor(String author) {
+        this.author = author;
     }
     @Override
     public String toString() {
-        return "Libro{" +
+        return "Book{" +
                 "id=" + id +
-                ", titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
                 '}';
     }
 }

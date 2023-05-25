@@ -44,7 +44,7 @@ public class BookView extends JFrame {
         //pannel2
         pannel2=new JPanel(new FlowLayout());
         pannel2.setBackground(new Color(152, 255, 27));
-        bttn2=new JButton("Cargar");
+        bttn2=new JButton("Load");
         table1=new JTable();
         scrollPane1=new JScrollPane(table1);
         pannel2.add(scrollPane1);
@@ -154,5 +154,9 @@ public class BookView extends JFrame {
     }
     public void setBttn2(JButton bttn2) {
         this.bttn2 = bttn2;
+    }
+    public void cleanTxtBox(){
+        txtBox2.setText("");
+        txtBox3.setText("");
     }
 }

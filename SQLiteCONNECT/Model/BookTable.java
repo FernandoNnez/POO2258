@@ -59,9 +59,9 @@ public class BookTable implements TableModel {
             case 0:
                 return tmp.getId();
             case 1:
-                return tmp.getTitulo();
+                return tmp.getTitle();
             case 2:
-                return tmp.getAutor();
+                return tmp.getAuthor();
         }
         return null;
     }
@@ -72,10 +72,10 @@ public class BookTable implements TableModel {
                 //data.get(rowIndex).getId(0);
                 break;
             case 1:
-                data.get(rowIndex).setTitulo((String)aValue);
+                data.get(rowIndex).setTitle((String)aValue);
                 break;
             case 2:
-                data.get(rowIndex).setAutor((String)aValue);
+                data.get(rowIndex).setAuthor((String)aValue);
                 break;
             default:
                 System.out.println("nothing changed");
@@ -93,5 +93,20 @@ public class BookTable implements TableModel {
         }catch (SQLException error){
             System.out.println("error on getting data");
         }
+    }
+    public boolean addBook(Book book){
+        boolean result=false;
+        try {
+            if(Bdao.insert(book)){
+                data.add(book);
+                result=true;
+            }else{
+                result=false;
+            }
+        }catch (SQLException error){
+            error.printStackTrace();
+            System.out.println(error.getMessage());
+        }
+        return result;
     }
 }

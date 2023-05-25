@@ -12,8 +12,8 @@ public class BookDAO implements InterfaceDAO {
         String sqlInsert="INSERT INTO libros(titulo, autor) VALUES(?,?);";
         int rowCount=0;
         PreparedStatement ptsm= ConnectionSingleton.getInstance("librosDB.db").getConnection().prepareStatement(sqlInsert);
-        ptsm.setString(1,((Book)obj).getTitulo());
-        ptsm.setString(2,((Book)obj).getAutor());
+        ptsm.setString(1,((Book)obj).getTitle());
+        ptsm.setString(2,((Book)obj).getAuthor());
         rowCount=ptsm.executeUpdate();
         return rowCount>0;
     }
@@ -22,8 +22,8 @@ public class BookDAO implements InterfaceDAO {
         String sqlUpdate="UPDATE libros SET titulo=?, autor=? WHERE id=?;";
         int rowCount=0;
         PreparedStatement ptsm= ConnectionSingleton.getInstance("librosDB.db").getConnection().prepareStatement(sqlUpdate);
-        ptsm.setString(1,((Book)obj).getTitulo());
-        ptsm.setString(2,((Book)obj).getAutor());
+        ptsm.setString(1,((Book)obj).getTitle());
+        ptsm.setString(2,((Book)obj).getAuthor());
         ptsm.setInt(3,((Book)obj).getId());
         rowCount=ptsm.executeUpdate();
         return rowCount>0;
