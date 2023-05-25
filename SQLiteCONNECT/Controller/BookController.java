@@ -2,7 +2,6 @@ package SQLiteCONNECT.Controller;
 import SQLiteCONNECT.Model.Book;
 import SQLiteCONNECT.Model.BookTable;
 import SQLiteCONNECT.View.BookView;
-
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
